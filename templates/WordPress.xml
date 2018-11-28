@@ -1,0 +1,3 @@
+<templateSet group="WordPress">
+  <template name="wpquery" value="&lt;?php&#10;&#10;// The Query&#10;$the_query = new WP_Query( $args );&#10;&#10;// The Loop&#10;if ( $the_query-&gt;have_posts() ) {&#10;&#9;echo '&lt;ul&gt;';&#10;&#9;while ( $the_query-&gt;have_posts() ) {&#10;&#9;&#9;$the_query-&gt;the_post();&#10;&#9;&#9;echo '&lt;li&gt;' . get_the_title() . '&lt;/li&gt;';&#10;&#9;}&#10;&#9;echo '&lt;/ul&gt;';&#10;&#9;/* Restore original Post Data */&#10;&#9;wp_reset_postdata();&#10;} else {&#10;&#9;// no posts found&#10;}" toReformat="false" toShortenFQNames="true" />
+</templateSet>
